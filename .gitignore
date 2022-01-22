@@ -1,0 +1,10 @@
+checkpoints
+.ipynb_checkpoints
+__pycache__
+
+# Created by data.ipynb
+dataset
+pytorch-hed
+ukiyo-e
+*.zip
+tmp_hed*

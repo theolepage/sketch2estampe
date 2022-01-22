@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>sketch2estampe</title>
+
+    <style>
+        html,
+        body {
+            background: #000;
+        }
+
+        .image {
+            display: block;
+            width: 50%;
+            margin: 50px auto 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    {% for image_path in images %}
+    <img src="{{image_path}}" alt="{{image_path}}" class="image" />
+    {% endfor %}
+</body>
+
+</html>

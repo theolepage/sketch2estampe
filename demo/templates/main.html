@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>sketch2estampe</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+
+<body onload="init()">
+    <h1 id="title">
+        Generation of Japanese paintings from sketches
+    </h1>
+
+    <h2 id="authors">Nicolas Blin, Ilan Guenet, Quentin Kaci and Theo Lepage</h2>
+
+    <div class="try">
+        <div id="canvas_container">
+            <canvas id="canvas" width="256" height="256"></canvas>
+        </div>
+
+        <div id="result_container">
+            <img id="result" width="256" height="256" />
+        </div>
+
+        <div>
+            <button onclick="render()" class="button">Generate your estampe</button>
+
+            <select id="checkpoint">
+                <option>Style 1</option>
+                <option>Style 2</option>
+            </select>
+
+            <span onclick="erase()" class="link">Clear canvas</span>
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="history">
+        {% for image_path in images %}
+        <a href="{{image_path}}" style="text-decoration: none;">
+            <div class="image" style="background-image: url('{{image_path}}')"></div>
+        </a>
+        {% endfor %}
+
+        <a class="link" href="/history">See all generated images</a>
+    </div>
+</body>
+
+</html>

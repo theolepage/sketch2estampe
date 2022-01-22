@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html, body {
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    
+    background: black;
+}
+
+#title {
+    margin-top: 60px;
+
+    font-weight: 400;
+}
+
+#authors {
+    margin-top: 50px;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#canvas_container {
+    display: inline-block;
+    width: 256px;
+    height: 256px;
+
+    margin: 75px 50px 75px 0;
+    
+    border: 1px white solid;
+}
+
+#result_container {
+    display: inline-block;
+    width: 256px;
+    height: 256px;
+    
+    border: 1px white solid;
+}
+
+#result:not([src]) {
+    visibility: hidden;
+}
+
+#checkpoint {
+    display: block;
+
+    min-width: 230px;
+
+    margin: auto;
+    margin-top: 35px;
+    padding: 10px 0;
+
+    text-align: center;
+    color: #fff;
+
+    background: #000;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+}
+
+.button {
+    padding: 22px 32px;
+
+    color: white;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border: 0;
+    border-radius: 8px;
+  
+    cursor: pointer;
+ 
+    opacity: 0.8;
+
+    transition: all 0.1s;
+}
+
+.button:hover {
+    box-shadow: rgba(80, 63, 205, 0.1) 0 1px 10px 10px;
+    opacity: 1;
+}
+
+.button:active {
+    transform: scaleX(0.97) scaleY(0.94);
+}
+
+.link {
+    display: block;
+
+    width: 200px;
+
+    margin: auto;
+    margin-top: 35px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: all 0.1s;
+}
+
+.link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.separator {
+    display: inline-block;
+
+    width: 350px;
+
+    margin: 100px 0;
+
+    border-top: 1px dashed white;
+}
+
+.history .image {
+    display: inline-block;
+
+    width: 256px;
+    height: 256px;
+
+    margin: 20px;
+
+    background-position: 256px;
+    border-radius: 6px;
+}
+
+.history .link {
+    margin-bottom: 80px;
+}
